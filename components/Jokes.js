@@ -1,24 +1,24 @@
 import { useState } from 'react';
-import { propTypes } from 'react-bootstrap/esm/Image';
+import { PropTypes } from 'prop-types';
 
 function Jokes({ title }) {
-  const [value, setValue] = useState(0);
+  const [joke, setJoke] = useState(0);
 
   const handleClick = () => {
-    setValue((prevState) => prevState + 1);
+    setJoke((prevState) => prevState);
   };
 
   return (
     <>
       <h1>{title}</h1>
-      <h2>{value}</h2>
+      <h2>{joke}</h2>
       <button type="button" onClick={handleClick}>Get a Punchline</button>
     </>
   );
 }
 
 Jokes.propTypes = {
-  title: propTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Jokes;
