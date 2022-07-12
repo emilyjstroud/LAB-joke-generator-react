@@ -12,7 +12,7 @@ function Jokes({ title }) {
     <>
       <h1>{title}</h1>
       <h2>{value}</h2>
-      <button type="button" onClick={handleClick}>Hello</button>
+      <button type="button" onClick={handleClick}>Get a Punchline</button>
     </>
   );
 }
