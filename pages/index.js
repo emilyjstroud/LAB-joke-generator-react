@@ -1,4 +1,12 @@
+import { useState } from 'react';
+
 function Home() {
+  const [value, setValue] = useState();
+
+  const handleClick = () => {
+    setValue((prevState) => prevState);
+  };
+
   return (
     <div
       className="text-center d-flex flex-column justify-content-center align-content-center"
@@ -9,7 +17,11 @@ function Home() {
         margin: '0 auto',
       }}
     >
-      <h1>Welcome Home!</h1>
+      <>
+        <h1>Welcome Home!</h1>
+        <h2>{value}</h2>
+        <button type="button" onClick={handleClick}>Get A Joke</button>
+      </>
     </div>
   );
 }
